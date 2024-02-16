@@ -71,7 +71,7 @@ To receive credit, you must type&nbsp;the code correctly.</i></center>
 		<tr>
 			<td style="line-height: 1.42857;"><b><b><label>Survey link:</label></b></b></td>
 			<td style="line-height: 1.42857;">
-			<p><b><b><a href="https://run.pavlovia.org/NIMH-COMPPSYCH/mood-anxiety-survey/?participant=${participant}" id="pavlovia-link" target="_blank">Click Here</a></b></b></p>
+			<p><b><b><a href="https://run.pavlovia.org/NIMH-COMPPSYCH/mood-anxiety-survey/?participant=" id="pavlovia-link" target="_blank">Click Here</a></b></b></p>
 			</td>
 		</tr>
 	</tbody>
@@ -137,7 +137,7 @@ function appendIDsToURL(linkElem, workerIDName) {
         var workerID = decodeURIComponent(workerResults[2].replace(/\+/g, " "));
         var phash = cyrb53(workerResults[2]);
         var linkURL = $(linkElem).attr('href');
-        $(linkElem).attr('href', linkURL + '&' + workerIDName + '=' + phash);
+        $(linkElem).attr('href', linkURL + workerIDName + '&' + workerIDName + '=' + phash);
     }
 }
 
