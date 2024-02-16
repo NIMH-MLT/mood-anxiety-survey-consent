@@ -134,7 +134,7 @@ function appendIDsToURL(linkElem, workerIDName) {
         var workerID = decodeURIComponent(workerResults[2].replace(/\+/g, " "));
         var phash = cyrb53(workerResults[2]);
         var linkURL = $(linkElem).attr('href');
-        $(linkElem).attr('href', linkURL + workerIDName + '&' + workerIDName + '=' + phash);
+        $(linkElem).attr('href', linkURL + phash + '&' + workerIDName + '=' + phash);
     }
 }
 
